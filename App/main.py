@@ -1,4 +1,8 @@
+from Classes.student import Student
+from Classes.teacher import Teacher
+from Classes.principal import *
 from validations import Validations as val
+
 
 def mainMenu():
     flag = True
@@ -33,7 +37,12 @@ def usersMenu():
         if choice == 1:
             addUser()
         elif choice == 2:
-            0#listUsers()
+            print("----- List Principal -----")
+            Principal2.listPrincipal()
+            print("----- List of Teachers -----")
+            Teacher.listTeacher()
+            print("----- List of Students -----")
+            Student.listStudents()
         elif choice == 3:
             updateUser()
         elif choice == 4:
@@ -67,13 +76,14 @@ def addUser():
     print("==== Add User ====")
     first_name = input("Enter first name: ")
     last_name = input("Enter last name: ")
-    identification = val.identification("Enter the user identification: ")
+    identification = val.identification("Enter the user identification: ") #It's not saving this attribute. Needs to be fixed.
     age = val.age("Enter age: ")
     biological_sex = val.biological_sex()
     profile = val.choice("What's the profile of this user?\n\t1. Principal\n\t2. Teacher\n\t3. Student\n\tChoice:", 1, 4)
     if profile == 1:
         print("Principal")
         experience = val.choice("How many years of experience does the Principal have?: ", 0, 100)
+        Principal(first_name, last_name, identification, age, biological_sex, experience).addPrincipal()
     elif profile == 2:
         print("Teacher")
         ask_degree = val.choice("Does the Teacher have a degree?\n\t1. Yes\n\t2. No\n\tChoice:", 1, 3)

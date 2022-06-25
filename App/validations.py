@@ -27,8 +27,8 @@ class Validations():
     
     def biological_sex():
         while True:
-            sex = input("Enter biological sex (Male or Female): ").strip().capitalize()
-            if sex not in ('Male', 'Female'):
+            sex = input("Enter biological sex (M or F): ").strip().capitalize()
+            if sex not in ('M', 'F'):
                 print("The biological sex must be Male or Female. Try again.")
                 continue
             break
