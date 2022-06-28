@@ -4,9 +4,9 @@
 - Mauricio Henao
 
 ### Jump to...
-1. Class Model
-2. Project Set Up
-3. Run project
+1. [Class Model](https://github.com/juancr15/SchoolProject/tree/master#class-model)
+2. [Project Set Up](https://github.com/juancr15/SchoolProject/tree/master#project-set-up)
+3. [Run project](https://github.com/juancr15/SchoolProject/tree/master#run-project)
 
 
 ## Class Model
