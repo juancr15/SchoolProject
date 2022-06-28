@@ -95,3 +95,7 @@ class Student2():
         DAO().delete(f"""DELETE FROM student WHERE id = {id}""")
         DAO().delete(f"""DELETE FROM person WHERE id = {person_ID}""")
         print(f"Student with ID: {id} deleted")
+
+   
+
+
