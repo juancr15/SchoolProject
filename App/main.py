@@ -2,9 +2,11 @@ from Classes.student import *
 from Classes.teacher import *
 from Classes.principal import *
 from Classes.course import *
+from Classes.enrollment import Enrollment
 from validations import Validations as val
 from user_module import UserModule as usrMod
 from course_module import CourseModule as crsMod
+from enrollment_module import EnrollmentModule as enrMod
 
 
 def mainMenu():
@@ -17,7 +19,7 @@ def mainMenu():
         print("\t2. Courses")
         print("\t3. Enrollment")
         print("\t0. Exit")
-        choice = val.choice("What module do you want to access?: ", 0, 3)
+        choice = val.choice("What module do you want to access?: ", 0, 4)
         if choice == 1:
             usersMenu()
         elif choice == 2:
@@ -79,8 +81,23 @@ def coursesMenu():
             flag = False
 
 def enrollStudents():
-    student_ID = val.identification("Enter the student identification: ")
-    course_ID = val.identification("Enter the course ID: ")
-    return 0
+    """ Menu of the Enrollment module"""
+    flag = True
+    while flag:
+        print("\n==== Enrollment Menu ====")
+        print("Select action:")
+        print("\t1. Add enrollment")
+        print("\t2. List enrollment")
+        print("\t3. Delete enrollment")
+        print("\t0. Go Back")
+        choice = val.choice("What do you want to do?: ", 0, 4)
+        if choice == 1:
+            enrMod.addEnrollment()
+        elif choice == 2:
+            Enrollment.listEnrollment()
+        elif choice == 3:
+            enrMod.deleteEnrollment()
+        else:
+            flag = False
 
 mainMenu()
