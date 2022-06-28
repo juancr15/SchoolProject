@@ -22,7 +22,7 @@
 
 ### Python Virtual Environment
 
-This project works with a Virtual Environment. You can activate the environment by executing the next script in the Windows PowerShell:
+This project works with a Virtual Environment. You can activate the environment by executing the following script in the Windows PowerShell:
 ```
 PS> env\Scripts\Activate.ps1
 ```
